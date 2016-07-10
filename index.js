@@ -265,7 +265,7 @@ MochaJUnitReporter.prototype.getXml = function(testsuites) {
 
   var rootSuite = {
     _attr: {
-      name: 'Mocha Tests',
+      name: process.env.MOCHA_REPORT_TITLE ? process.env.MOCHA_REPORT_TITLE : 'Mocha Tests',
       time: totalSuitesTime,
       tests: totalTests,
       failures: stats.failures
